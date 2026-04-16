@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema Digital - Benitez Franco</title>
+    <style>
+        /* Variables de color basadas en tu gráfico */
+        :root {
+            --bg-body: #eff3f6;
+            --bg-aside: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --color-trabajo: #8eb374; 
+            --color-social: #69a378; 
+            --color-personal: #5aa8a2;
+            --footer-bg: #2c3e50;
+            --footer-text: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-body);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal para separar Aside de Main */
+        .wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        /* --- ASIDE IZQUIERDO --- */
+        aside {
+            width: 350px;
+            background-color: var(--bg-aside);
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-aside {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .info-list {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #eee;
+        }
+
+        .info-item b {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        /* Colores dinámicos para los títulos del aside */
+        .item-trabajo { border-color: var(--color-trabajo); }
+        .item-trabajo b { color: var(--color-trabajo); }
+        
+        .item-social { border-color: var(--color-social); }
+        .item-social b { color: var(--color-social); }
+        
+        .item-personal { border-color: var(--color-personal); }
+        .item-personal b { color: var(--color-personal); }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        main {
+            flex: 1;
+            padding: 60px;
+        }
+
+        main h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+
+        /* --- FOOTER ACADÉMICO --- */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 25px 50px;
+            border-top: 5px solid var(--color-trabajo);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            font-size: 0.9rem;
+        }
+
+        .footer-section small {
+            display: block;
+            text-transform: uppercase;
+            color: var(--color-trabajo);
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.7rem;
+        }
+
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; }
+            aside { width: 100%; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside>
+            <img src="circulos.png" alt="Gráfico de áreas" class="img-aside">
+            
+            <div class="info-list">
+                <div class="info-item item-trabajo">
+                    <b>Trabajo</b>
+                    Workana, Marketplace
+                </div>
+                <div class="info-item item-social">
+                    <b>Social</b>
+                    Adidas Runtastic
+                </div>
+                <div class="info-item item-personal">
+                    <b>Personal</b>
+                    Redes Sociales
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Yo Digital</h1>
+            <p>Al reflexionar sobre mi identidad en el entorno digital, percibo que nos encontramos inmersos en un mundo artificial. A menudo, de manera inconsciente, arribamos a espacios virtuales desconocidos que pueden representar un peligro para las nuevas generaciones. Por esta razón, el gran desafío actual consiste en enseñar a los jóvenes a no depender netamente de la informática. En lugar de una subordinación tecnológica, debemos apostar con firmeza a la innovación y la creatividad humana.</p>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <small>Cátedra</small>
+                Alfabetización digital y académica
+            </div>
+            <div class="footer-section">
+                <small>Docentes</small>
+                Ocampo Rocío y González Carla
+            </div>
+            <div class="footer-section">
+                <small>Alumno</small>
+                Benitez Franco Pedro
+            </div>
+            <div class="footer-section">
+                <small>Carrera</small>
+                Profesorado de Educación Secundaria en Tecnologías
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
